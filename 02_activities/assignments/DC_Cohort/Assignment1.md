@@ -106,7 +106,9 @@ Please do not pick the exact same tables that I have already diagrammed. For exa
 	- <img src="./images/01_farmers_market_conceptual_model.png" width="600">
 - The column names can be found in a few spots (DB Schema window in the bottom right, the Database Structure tab in the main window by expanding each table entry, at the top of the Browse Data tab in the main window)
 
-***
+#### Please see attached for diagram for Prompt 1.
+
+![assignment1_model.png](./images/01_logical_data_model.png)
 
 ## Section 2:
 You can start this section following *session 2*.
@@ -206,4 +208,10 @@ Consider, for example, concepts of fariness, inequality, social structures, marg
 
 ```
 Your thoughts...
+
+The Wired article highlights that something mundane such as a national register in Pakistan can have systems of inequality, namely the patriarchy and cisnormativity, embedded into it.  On the topic of trans and non-binary identities, in Canada, it has only been recently, specifically 2018, that the 'X' gender identifier has been recognized and even then, it comes with its own issues, such as with regards to travel to the United States, as those who identify with the 'X' marker are being asked to refrain from using so, given the increasingly hostile rhetoric of the Trump administration to trans and non-binary people. 
+
+Another issue with databases and data systems is along socioeconomic lines. This is especially difficult towards the unhoused population, given that many databases assume that one has a permanent address. While rooted in pragmatism, this becomes an issue as this traps unhoused people in a cycle where they cannot apply for jobs, access social services, or open a bank account.
+
+
 ```
