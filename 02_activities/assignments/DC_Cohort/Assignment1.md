@@ -108,7 +108,7 @@ Please do not pick the exact same tables that I have already diagrammed. For exa
 
 #### Please see attached for diagram for Prompt 1.
 
-<img src = "./images/01_logical_data_model.png" width = 500>
+<img src = "./images/01_logical_data_model.PNG" width = 500>
 
 ## Section 2:
 You can start this section following *session 2*.
