@@ -45,8 +45,18 @@ There are several tools online you can use, I'd recommend [Draw.io](https://www.
 
 **HINT:** You do not need to create any data for this prompt. This is a conceptual model only. 
 
+
+Where PK is primary key and FK is a foreign key.
+![Prompt 1](./images/slide1_prompt1_logical_model.jpg)
+
+
+
+
 #### Prompt 2
 We want to create employee shifts, splitting up the day into morning and evening. Add this to the ERD.
+
+Where PK is primary key and FK is a foreign key.
+![Prompt 2](./images/slide2_prompt1_logical_model.jpg)
 
 #### Prompt 3
 The store wants to keep customer addresses. Propose two architectures for the CUSTOMER_ADDRESS table, one that will retain changes, and another that will overwrite. Which is type 1, which is type 2? 
@@ -55,6 +65,37 @@ The store wants to keep customer addresses. Propose two architectures for the CU
 
 ```
 Your answer...
+Type 1 architecture will overwrite old data with new data.
+
+For example, if customer 1 moves from postal code M5G to H4A. 
+Then only postal code H4A will be kept.
+
+Type 2 architecture will add a new row, i.e. keeping both the old and new. Keeping track of which one is current either by a current flag, a version tag, or start and end date.
+
+Going back to the previous example, this could either be:
+
+| customer_id  | postal code | version   |
+|--------------|-------------|-----------|
+| 1            | M5G         | 0         |
+|--------------|-------------|-----------|
+| 1            | H4A         | 1         |
+
+or
+
+| customer_id  | postal code | current_flag |
+|--------------|-------------|--------------|
+| 1            | M5G         | N            |
+|--------------|-------------|--------------|
+| 1            | H4A         | Y            |
+
+or
+
+| customer_id  | postal code | start_date   | end_date      |
+|--------------|-------------|--------------|---------------|
+| 1            | M5G         | 23-08-2016   | 12-03-2020    |
+|--------------|-------------|--------------|---------------|
+| 1            | H4A         | 12-03-2020   | NULL          |
+
 ```
 
 ***
@@ -184,4 +225,12 @@ Consider, for example, concepts of labour, bias, LLM proliferation, moderating c
 
 ```
 Your thoughts...
+
+    To me, there are two main ethical issues at play in the article; firstly, the propogation of the great man theory in scientific progress and secondly, the biases involved in the people who are instrumental in building and maintaining the datasets of where neural nets, and downstream, generative AI and other LLMs are based on.
+
+    With regards to the first point, as highlighted in each database that neural nets were based on: labour was divided to the masses and cannot be attributed a singular person. In ImageNet, while the idea came from Dr. Li, the work of identifying images correctly came from Amazon's Mechanical Turk, which is a crowdsourcing website where people contributed to identifying said images. The source of images for ImageNet came from WordNet, which was designed with the help of his wife who is not mentioned in the Princeton Obituary; akin to the true creator of a fundamental object in microbiology, the agar plate, who was Fanny Hesse, the wife of a technician in the lab of Dr. Robert Koch. Even now, the act of moderation in ImageNet will most likely be done by hand with an unsung team.
+
+    For the second point, it's important to note the biases that come from those who identify words and images for neural nets and LLMs. Everyone has inherent preconceptions, revolving around race or sex, which can show up in the new genAI models such as the Midjourney Algorithm, which often perpetuates tropes such as the White Saviour complex or exaggerated African wildlife  (https://www.thelancet.com/journals/langlo/article/PIIS2214-109X(23)00329-7/fulltext). 
+
+    Overall, as stated by the article's title, while neural nets are the revolution of technology, it is still based off the work of people: which we should recognize in a positive light, as a work of collaboration between many humans; but also a cautionary note, that it can also perpetuate the inequities that still persist among us. 
 ```
